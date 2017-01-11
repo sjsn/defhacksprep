@@ -1,7 +1,7 @@
 # Hackathon Prep!
 > By Sam San Nicolas
 
-This is a very brief Git and Python/Flask code review/lesson I made for my friends in preparation for their first Hackathon, [defHacks 2017](http://defhacks.io/). It's probably not the best, but it should get the job done in teaching them the basics of what they need to know for our project.
+This is a very brief Git and Python/Flask code review/lesson I made for my friends in preparation for their first Hackathon, [defHacks 2017](http://defhacks.io/). It's probably not the best, but it should get the job done in teaching them the basics of what they need to know for our project. *Designed for Windows machines*.
 
 ## Before starting
 I assume you already have a GitHub account since you're reading from this private repo, but in case you're a wizard, please go make one! I also recommend registering it as a student account [here](https://education.github.com/pack). This will allow you to create an unlimited number of private repos and also gives you other perks such as free software and AWS credits!
@@ -22,7 +22,7 @@ I recommend all of this! I use it and I'm a pro so it must be good.
 * [Git](https://git-scm.com/downloads) - Git is a version control system (the industry standard) that allows multiple people to edit code at the same time without breaking everything. Think of it as a lazy Google Docs but for coding.
 
 ## Setting up
-This should be done *after* setting downloading the shit above.
+This should be done *after* downloading the shit above.
 
 1. Open Source Tree, the command prompt, and the Atom text editor.
 
