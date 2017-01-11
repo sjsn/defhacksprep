@@ -84,10 +84,9 @@ Any questions? Now's a good time to ask. We're pretty much just coding after thi
 ### Test the app!
 1. Go back to the command prompt
 2. Make sure you're in the project directory
-3. Type `export FLASK_APP=server.py`
-    * This sets an environment variable, something that Flask can read off of your computer, to point Flask to the start of you application
-4. Type `export FLASK_DEBUG=1`
-    * Another environment variable for Flask to show error messages incase something goes wrong.
+3. Search for "environment variables" in the Windows search bar in the bottom left of your screen. Click on "Edit environment variables for your account".
+4. Set `FLASK_APP=server.py` and `FLASK_DEBUG=1`
+    * The FLASK_APP variable tells your machine that the Flask framework is going to use a file called server.py. The FLASK_DEBUG enables the debug mode to show any errors.
 5. Type `flask run`
 6. Launch your web browser of choice (Chrome is the best IMO, but firefox works too. Avoid edge/safari as they don't support all web standards)
 7. Go to [localhost:8080](http://localhost:8080)
