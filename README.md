@@ -86,15 +86,16 @@ Any questions? Now's a good time to ask. We're pretty much just coding after thi
 2. Make sure you're in the project directory
 3. Search for "environment variables" in the Windows search bar in the bottom left of your screen. Click on "Edit environment variables for your account".
 4. Set `FLASK_APP=server.py` and `FLASK_DEBUG=1`
-    * The FLASK_APP variable tells your machine that the Flask framework is going to use a file called server.py. The FLASK_DEBUG enables the debug mode to show any errors.
-5. Type `flask run`
-6. Launch your web browser of choice (Chrome is the best IMO, but firefox works too. Avoid edge/safari as they don't support all web standards)
-7. Go to [localhost:8080](http://localhost:8080)
+    * The FLASK_APP variable tells your machine that the Flask framework is going to use a file called server.py.
+    * The FLASK_DEBUG enables the debug mode to show any errors.
+5. From the command prompt, type `flask run`
+6. Launch your web browser of choice (Chrome is the best IMO, but Firefox works too. Avoid edge/safari as they don't support all web standards)
+7. Go to [localhost:5000](http://localhost:5000)
 8. Congratulations! You made your first web app!
   * You can go back to the server.py file and change the your_name variable to whatever you want. When you save the file, come back to your browser and refresh the webpage. It will update in real-time.
 9. What's going on:
   * localhost is pretty much just your computer pretending to be a website. Developers use it to test their web applications before launching them.
-  * the :8080 is telling your machine to open up port 8080 (a port commonly used for web-dev) and allowing the browser to access its information.
+  * the :5000 is telling your machine to open up port 5000 (a port commonly used for web-dev) and allowing the browser to access its information.
   * A port is just a window into the files on your computer (not really but for simplicity's sake we'll go with that). It allows the browser (a file on your machine) to read and interpret the exposed information (the server.py file) and turn it into whatever the information demanded.
 
 ---
