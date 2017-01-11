@@ -44,9 +44,10 @@ You should now be able to see the history of this repo! Pretty cool. Ask me ques
 * Type `pip install virtualenv`
   * `pip` stands for "PIP installs Python" (yes, it is a recursive acronym). It pretty much allows us to download other peoples Python code and use it in our own code. In this instance we are installing ["virtualenv"](http://docs.python-guide.org/en/latest/dev/virtualenvs/). This allows us to create a "virtual environment", which is pretty much a subdirectory, in which to store all of the Python code we borrow from other people so it won't interfere with our own code.
 * Type `virtualenv venv` to create the virtual environment in a directory called "venv".
+* Type `source venv/bin/activate` to go inside the virtual environment. (Type `deactivate` to exit it)
 * Type `pip install flask`
   * In this instance, we are downloading a package called ["flask"](http://flask.pocoo.org/) which is an open source (anyone can contribute to and use it) web frameworking tool. If you `cd` into the venv directory, you will see that it now contains some additional files that it got when you installed flask.
-  
+
 Any questions? Now's a good time to ask. We're pretty much just coding after this.
 
 ### Code it up in Atom!
@@ -59,22 +60,22 @@ Any questions? Now's a good time to ask. We're pretty much just coding after thi
   # import statements to access code we installed through pip
   from flask import Flask, render_template, jsonify, redirect
   import request
-  
+
   # Sets the Flask application to this file
   app = Flask(__name__)
-  
+
   # The '@' symbol is a decorator in python that adds additional funcionality to a python function
   # @app.route tells the web to listen at the root directory (highest level, the '/' at the end of a url) for anyone who requests or 'GET's it
   @app.route('/', methods=['GET'])
   def main():
     # Let's store your name in this variable to render out to our website!
     your_name = 'insert your name here'
-    
+
     # We give back the index.html page to anyone who requests our root directory
     # index.html is just a (pre-coded by me) web file that contains a basic website
     # We also pass in the 'your_name' variable as 'name' so our webpage can access it
     return render_template('index.html', name=your_name)
-  
+
 ```
 
 ### Test the app!
@@ -89,7 +90,7 @@ Any questions? Now's a good time to ask. We're pretty much just coding after thi
   * localhost is pretty much just your computer pretending to be a website. Developers use it to test their web applications before launching them.
   * the :8080 is telling your machine to open up port 8080 (a port commonly used for web-dev) and allowing the browser to access its information.
   * A port is just a window into the files on your computer (not really but for simplicity's sake we'll go with that). It allows the browser (a file on your machine) to read and interpret the exposed information (the server.py file) and turn it into whatever the information demanded.
-  
+
 ---
 
 ## (Very brief) Python Review!
@@ -143,11 +144,11 @@ for item in grocery_list:
 def hello(param1, param2="This is the default"):
   # param1 could be of type String, and int, and float, etc.
   # param2 defaults to "This is the default" if the user didn't specify the value
-  
+
   # Use print() to log stuff to the console. (*Note*: Python 3 requires the paranthesis for print statements. Python 2 did not.)
   print(param1) # Python is a whitespace language. Don't need semicolons, only tabs and indentation
   print(param2)
-  
+
 # Call a function by typing its name alongside any parameters
 hello("test") # Would print "test" followed by "This is the default"
 hello("Another test", "Tests are stupid") # Would print "Another Test" followed by "Tests are stupid"
