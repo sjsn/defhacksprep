@@ -60,24 +60,24 @@ Any questions? Now's a good time to ask. We're pretty much just coding after thi
   * **Warning** I recommend reviewing python a bit before moving on. I included a *brief* python review section at the bottom of this readme
 3. Copy and paste the code below into the file
 ```python
-  # import statements to access code we installed through pip
-  from flask import Flask, render_template, jsonify, redirect
-  import request
+# import statements to access code we installed through pip
+from flask import Flask, render_template, jsonify, redirect
+import request
 
-  # Sets the Flask application to this file
-  app = Flask(__name__)
+# Sets the Flask application to this file
+app = Flask(__name__)
 
-  # The '@' symbol is a decorator in python that adds additional funcionality to a python function
-  # @app.route tells the web to listen at the root directory (highest level, the '/' at the end of a url) for anyone who requests or 'GET's it
-  @app.route('/', methods=['GET'])
-  def main():
-    # Let's store your name in this variable to render out to our website!
-    your_name = 'insert your name here'
+# The '@' symbol is a decorator in python that adds additional funcionality to a python function
+# @app.route tells the web to listen at the root directory (highest level, the '/' at the end of a url) for anyone who requests or 'GET's it
+@app.route('/', methods=['GET'])
+def main():
+  # Let's store your name in this variable to render out to our website!
+  your_name = 'insert your name here'
 
-    # We give back the index.html page to anyone who requests our root directory
-    # index.html is just a (pre-coded by me) web file that contains a basic website
-    # We also pass in the 'your_name' variable as 'name' so our webpage can access it
-    return render_template('index.html', name=your_name)
+  # We give back the index.html page to anyone who requests our root directory
+  # index.html is just a (pre-coded by me) web file that contains a basic website
+  # We also pass in the 'your_name' variable as 'name' so our webpage can access it
+  return render_template('index.html', name=your_name)
 
 ```
 
