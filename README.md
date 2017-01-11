@@ -19,6 +19,7 @@ I recommend all of this! I use it and I'm a pro so it must be good.
 * [Python 3](https://www.python.org/downloads/) - Make sure you get the 3.x.x version! Python 2 is garbage.
   * To check if it's installed, open your command prompt (search for `cmd`) and then type python. An execution shell should open up. Then type the command `import sys` and then `print(sys.version)`. It should output (3.6.0). Type `exit()` to close the execution shell.
 * [Atom](https://atom.io/) - An open source "industry standard" text editor!
+* [Git](https://git-scm.com/downloads) - Git is a version control system (the industry standard) that allows multiple people to edit code at the same time without breaking everything. Think of it as a lazy Google Docs but for coding.
 
 ## Setting up
 This should be done *after* setting downloading the shit above.
