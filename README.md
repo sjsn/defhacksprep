@@ -81,12 +81,16 @@ Any questions? Now's a good time to ask. We're pretty much just coding after thi
 ### Test the app!
 1. Go back to the command prompt
 2. Make sure you're in the project directory
-3. Type `flask run`
-4. Launch your web browser of choice (Chrome is the best IMO, but firefox works too. Avoid edge/safari as they don't support all web standards)
-5. Go to [localhost:8080](http://localhost:8080)
-6. Congratulations! You made your first web app!
+3. Type `export FLASK_APP=server.py`
+    * This sets an environment variable, something that Flask can read off of your computer, to point Flask to the start of you application
+4. Type `export FLASK_DEBUG=1`
+    * Another environment variable for Flask to show error messages incase something goes wrong.
+5. Type `flask run`
+6. Launch your web browser of choice (Chrome is the best IMO, but firefox works too. Avoid edge/safari as they don't support all web standards)
+7. Go to [localhost:8080](http://localhost:8080)
+8. Congratulations! You made your first web app!
   * You can go back to the server.py file and change the your_name variable to whatever you want. When you save the file, come back to your browser and refresh the webpage. It will update in real-time.
-7. What's going on:
+9. What's going on:
   * localhost is pretty much just your computer pretending to be a website. Developers use it to test their web applications before launching them.
   * the :8080 is telling your machine to open up port 8080 (a port commonly used for web-dev) and allowing the browser to access its information.
   * A port is just a window into the files on your computer (not really but for simplicity's sake we'll go with that). It allows the browser (a file on your machine) to read and interpret the exposed information (the server.py file) and turn it into whatever the information demanded.
