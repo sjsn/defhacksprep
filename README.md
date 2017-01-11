@@ -1,6 +1,8 @@
 # Hackathon Prep!
 > By Sam San Nicolas
 
+This is a very brief Git and Python/Flask code review/lesson I made for my friends in preparation for their first Hackathon, [defHacks 2017](http://defhacks.io/). It's probably not the best, but it should get the job done in teaching them the basics of what they need to know for our project.
+
 ## Before starting
 I assume you already have a GitHub account since you're reading from this private repo, but in case you're a wizard, please go make one! I also recommend registering it as a student account [here](https://education.github.com/pack). This will allow you to create an unlimited number of private repos and also gives you other perks such as free software and AWS credits!
 
