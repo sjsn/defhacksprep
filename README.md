@@ -11,6 +11,7 @@ I assume you already have a GitHub account since you're reading from this privat
 * *Type* - Put into the command prompt.
 * *ReadMe.md* - This file that you're reading. GitHub uses ReadMe's as little documents inside their directories to give context about a project. the '.md' extension stands for 'MarkDown', a text formatting engine which can beautify plain text into a document such as this.
 * *console* - The debugging interface. Could be the command prompt, the [Chrome Developer Tools](https://developer.chrome.com/devtools), etc.
+* *Repo* - Repository. Think of it like a Git project folder. It holds everything having to do with the project.
 
 ## Things you should download
 I recommend all of this! I use it and I'm a pro so it must be good.
@@ -47,7 +48,7 @@ You should now be able to see the history of this repo! Pretty cool. Ask me ques
 * Type `pip install virtualenv`
   * `pip` stands for "PIP installs Python" (yes, it is a recursive acronym). It pretty much allows us to download other peoples Python code and use it in our own code. In this instance we are installing ["virtualenv"](http://docs.python-guide.org/en/latest/dev/virtualenvs/). This allows us to create a "virtual environment", which is pretty much a subdirectory, in which to store all of the Python code we borrow from other people so it won't interfere with our own code.
 * Type `virtualenv venv` to create the virtual environment in a directory called "venv".
-* Type `source venv/bin/activate` to go inside the virtual environment. (Type `deactivate` to exit it)
+* Type `venv/Scripts/activate.bat` to go inside the virtual environment. (Type `deactivate` to exit it)
 * Type `pip install flask`
   * In this instance, we are downloading a package called ["flask"](http://flask.pocoo.org/) which is an open source (anyone can contribute to and use it) web frameworking tool. If you `cd` into the venv directory, you will see that it now contains some additional files that it got when you installed flask.
 
@@ -61,8 +62,7 @@ Any questions? Now's a good time to ask. We're pretty much just coding after thi
 3. Copy and paste the code below into the file
 ```python
 # import statements to access code we installed through pip
-from flask import Flask, render_template, jsonify, redirect
-import request
+from flask import Flask, render_template
 
 # Sets the Flask application to this file
 app = Flask(__name__)
@@ -72,31 +72,34 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def main():
   # Let's store your name in this variable to render out to our website!
-  your_name = 'insert your name here'
+  your_name = 'Insert your name here!!'
 
   # We give back the index.html page to anyone who requests our root directory
   # index.html is just a (pre-coded by me) web file that contains a basic website
   # We also pass in the 'your_name' variable as 'name' so our webpage can access it
   return render_template('index.html', name=your_name)
 
+print(__name__)
+
+# Executes the command when you run 'python server.py'
+if __name__ == '__main__':
+  app.run()
+
 ```
 
 ### Test the app!
 1. Go back to the command prompt
 2. Make sure you're in the project directory
-3. Search for "environment variables" in the Windows search bar in the bottom left of your screen. Click on "Edit environment variables for your account".
-4. Set `FLASK_APP=server.py` and `FLASK_DEBUG=1`
-    * The FLASK_APP variable tells your machine that the Flask framework is going to use a file called server.py.
-    * The FLASK_DEBUG enables the debug mode to show any errors.
-5. From the command prompt, type `flask run`
-6. Launch your web browser of choice (Chrome is the best IMO, but Firefox works too. Avoid edge/safari as they don't support all web standards)
-7. Go to [localhost:5000](http://localhost:5000)
-8. Congratulations! You made your first web app!
+3. From the command prompt, type `python server.py`
+4. Launch your web browser of choice (Chrome is the best IMO, but Firefox works too. Avoid edge/safari as they don't support all web standards)
+5. Go to [localhost:5000](http://localhost:5000)
+6. Congratulations! You made your first web app!
   * You can go back to the server.py file and change the your_name variable to whatever you want. When you save the file, come back to your browser and refresh the webpage. It will update in real-time.
-9. What's going on:
+7. What's going on:
   * localhost is pretty much just your computer pretending to be a website. Developers use it to test their web applications before launching them.
   * the :5000 is telling your machine to open up port 5000 (a port commonly used for web-dev) and allowing the browser to access its information.
   * A port is just a window into the files on your computer (not really but for simplicity's sake we'll go with that). It allows the browser (a file on your machine) to read and interpret the exposed information (the server.py file) and turn it into whatever the information demanded.
+8. Hit `ctrl+c` on your keyboard to stop the server.
 
 ---
 
